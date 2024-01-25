@@ -6,10 +6,11 @@ import song_cover_art from "../public/images/track_7_song_art.png"
 const Card = () => {
 
     function handleClick(e) {
-        let inputEl = document.getElementById("input-field")
-        let commentaryDB = ref(db, "commentary")
-        push(commentaryDB, inputEl.value)
 
+        const commentaryDB = ref(db, "commentary")
+        let inputEl = document.getElementById("input-field")
+
+        push(commentaryDB, inputEl.value)
         console.log("This works well!")
     }
 
