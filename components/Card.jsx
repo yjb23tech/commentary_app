@@ -6,14 +6,18 @@ import song_cover_art from "../public/images/track_7_song_art.png"
 const Card = () => {
 
     function handleClick(e) {
+        let inputEl = document.getElementById("input-field")
+        let commentaryDB = ref(db, "commentary")
+        push(commentaryDB, inputEl.value)
+
         console.log("This works well!")
     }
 
     return (
         <div className="song-card">
             <img src={song_cover_art} />
-            <input type="text" placeholder="leave a comment :D" />
-            <button onClick={handleClick}>GO!</button>
+            <input id="input-field"type="text" placeholder="leave a comment :D" />
+            <button id="submit-btn" onClick={handleClick}>GO!</button>
         </div>
     )
 }
