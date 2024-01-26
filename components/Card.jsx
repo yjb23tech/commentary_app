@@ -18,7 +18,7 @@ const Card = () => {
         <div className="song-card">
             <img src={song_cover_art} />
             <input id="input-field"type="text" placeholder="leave a comment :D" />
-            <button id="submit-btn" onClick={handleClick}>GO!</button>
+            <button id="submit-btn" onClick={handleClick}>LET'S GO!</button>
         </div>
     )
 }
